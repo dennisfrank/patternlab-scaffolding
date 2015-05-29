@@ -1,6 +1,13 @@
 #!/bin/sh
 
-echo "Initializing project"
+echo "\nGet dependencies"
+echo "================\n"
+
+npm install
+bower install
+
+echo "\n\nInitializing project"
+echo "====================\n"
 
 git clone https://github.com/pattern-lab/patternlab-php.git && \
 mv patternlab-php/config/ .                                 && \
@@ -8,21 +15,28 @@ mv patternlab-php/core/ .                                   && \
 mv patternlab-php/extras/ .                                 && \
 mv patternlab-php/public/ .                                 && \
 rm -rf patternlab-php                                       && \
-rm -rf source/css                                           && \
+rm -rf source/assets                                           && \
 php core/builder.php -g                                     && \
 rm -rf source/css                                           && \
 git submodule init                                          && \
 git submodule update                                        && \
-cd source/css/                                              && \
+cd source/assets/scss/                                      && \
 git pull origin master                                      && \
-cd ../../                                                   && \
-rm -rf source/css/.git                                      && \
-rm -rf .git/                                                && \
-rm -rf .gitmodules                                          && \
+cd ../../../                                                && \
+rm source/favicon.ico                                       && \
+rm -rf source/assets/scss/.git                              && \
+# rm -rf .git/                                                && \
+# rm -rf .gitmodules                                          && \
+rm -rf source/css/                                          && \
 rm -rf source/js/                                           && \
-mkdir source/js/                                            && \
-> source/js/script.js
+rm -rf source/fonts/                                        && \
+mkdir source/assets/fonts/                                  && \
+> source/assets/fonts/.gitkeep                              && \
+mkdir source/assets/images/                                 && \
+> source/assets/images/.gitkeep                             && \
+mkdir source/assets/js/                                     && \
+> source/assets/js/script.js
 
-echo "Pattern Lab is now beautifully scaffolded"
+echo "\nPattern Lab is now beautifully scaffolded"
 
 rm init

@@ -78,7 +78,7 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    // BorwserSync task.
+    // BrowserSync task.
     grunt.registerTask('sync', [
         'default',
         'browserSync',

@@ -9,7 +9,7 @@ module.exports = {
     },
     img: {
         files: ['<%= globalConfig.source.img %>/**/{.*,*,*/*}'],
-        tasks: ['copy:img']
+        tasks: ['copy:imgPublic', 'copy:imgCms']
     },
     fonts: {
         files: ['<%= globalConfig.source.fonts %>/**/{.*,*,*/*}'],

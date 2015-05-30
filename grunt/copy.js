@@ -9,13 +9,23 @@ module.exports = {
             }
         ]
     },
-    img: {
+    imgPublic: {
         files: [
             {
                 expand: true,
                 cwd: '<%= globalConfig.source.img %>/',
                 src: ['./**/*.*'],
                 dest: '<%= globalConfig.public.img %>/'
+            }
+        ]
+    },
+    imgCms: {
+        files: [
+            {
+                expand: true,
+                cwd: '<%= globalConfig.source.img %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.cms.img %>/'
             }
         ]
     },

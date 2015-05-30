@@ -20,8 +20,8 @@ module.exports = {
             livereload: 35729
         },
         files: [
-            '<%= globalConfig.public.css %>/*.css',
-            '<%= globalConfig.public.js %>/**/*'
+            '<%= globalConfig.public.public %>/**/*',
+            '!<%= globalConfig.public.public %>/patterns/**/*'
         ]
     }
 };

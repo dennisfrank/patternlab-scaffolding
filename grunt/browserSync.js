@@ -1,6 +1,9 @@
 module.exports = {
     bsFiles: {
-        src : '<%= globalConfig.public.css %>/*.css'
+        src: [
+            '<%= globalConfig.public.public %>/**/*',
+            '!<%= globalConfig.public.public %>/patterns/**/*'
+        ]
     },
     options: {
         watchTask: true,

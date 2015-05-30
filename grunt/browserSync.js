@@ -12,7 +12,9 @@ module.exports = {
             port: 8001
         },
         server: {
-            baseDir: "./<%= globalConfig.public.public %>/"
-        }
+            baseDir: './<%= globalConfig.public.public %>/'
+        },
+        ghostMode: false,
+        notify: false
     }
 };

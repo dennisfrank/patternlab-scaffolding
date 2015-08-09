@@ -1,7 +1,11 @@
 module.exports = {
-    jsVendor: {
-        files: {
-            '<%= globalConfig.cms.js %>/vendor.min.js': '<%= globalConfig.cms.js %>/vendor.min.js'
-        }
+    js: {
+        files: [{
+            expand: true,
+            cwd: '<%= globalConfig.cms.js %>',
+            src: ['**/*.js'],
+            dest: '<%= globalConfig.cms.js %>',
+            ext: '.min.js'
+        }]
     }
 };

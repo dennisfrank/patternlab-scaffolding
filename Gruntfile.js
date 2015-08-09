@@ -67,13 +67,12 @@ module.exports = function(grunt) {
         'copy:patternlab',
         'shell:patternlab-generate',
         'bowerInject',
-        'jsVendor',
+        'scripts',
         'copy:imgPublic',
         'copy:imgCms',
         'copy:fontsPublic',
         'copy:fontsCms',
         'copy:jsPublic',
-        'copy:jsCms',
         'shell:patternlab-patterns',
         'sass_globbing',
         'concurrent',
@@ -101,10 +100,17 @@ module.exports = function(grunt) {
         'injector'
     ]);
 
-    // Uglify and concat vendor files.
-    grunt.registerTask('jsVendor', [
-        'concat:jsVendor',
-        'uglify:jsVendor'
+    // Uglify and concat js files.
+    grunt.registerTask('scripts', [
+        //'concat:jsVendor',
+        //'concat:jsScripts',
+        'concat:jsAll',
+        'uglify:js'
+    ]);
+
+    // Deploy task.
+    grunt.registerTask('deploy', [
+        'rsync:stage'
     ]);
 
 

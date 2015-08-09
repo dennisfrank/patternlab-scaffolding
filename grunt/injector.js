@@ -9,7 +9,12 @@ module.exports = {
     },
     files: {
         expand: true,
-        cwd: '<%= globalConfig.source.js %>/vendor',
-        src: ['**/*.js']
+        cwd: '<%= globalConfig.source.js %>',
+        src: [
+            'vendor/libs/**/*.js',
+            'vendor/plugins/**/*.js',
+            'scripts/**/*.js',
+            '*.js'
+        ]
     }
 };

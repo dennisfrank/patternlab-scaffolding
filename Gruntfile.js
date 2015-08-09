@@ -80,15 +80,8 @@ module.exports = function(grunt) {
         'scsslint'
     ]);
 
-    // Pattern Lab dev task.
-    grunt.registerTask('dev', [
-        'default',
-        'connect:server',
-        'watch'
-    ]);
-
     // BrowserSync task.
-    grunt.registerTask('sync', [
+    grunt.registerTask('serve', [
         'default',
         'browserSync',
         'watch'

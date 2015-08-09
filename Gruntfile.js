@@ -83,7 +83,8 @@ module.exports = function(grunt) {
         'shell:patternlab-patterns',
         'sass_globbing',
         'concurrent',
-        'autoprefixer'
+        'autoprefixer',
+        'todo:showOutput',
     ]);
 
     // BrowserSync task.

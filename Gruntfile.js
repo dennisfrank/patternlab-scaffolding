@@ -37,6 +37,12 @@ module.exports = function(grunt) {
             js: '<%= globalConfig.cms.assets %>/js',
             fonts: '<%= globalConfig.cms.assets %>/fonts',
             img: '<%= globalConfig.cms.assets %>/images'
+        },
+
+        // Staging server
+        stage: {
+            host: '', // user@example.com
+            dest: ''  // server path
         }
 
     };

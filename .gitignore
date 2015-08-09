@@ -1,9 +1,40 @@
+# Ignore hidden folders
+# This takes care of .tmp, .sass-cache, and many others #
+.*/
+
+# Ignore OS generated files
 .DS_Store
-*.sass-cache/
-node_modules/
-bower_components/
-*.idea/
-.idea/
-.grunt
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Sublime Text
+# *.sublime-project
 *.sublime-workspace
-*.sublime-project
+
+# Bower
+bower_components/
+
+# Node
+node_modules/
+
+# Pattern Lab
+*-ck.js
+
+# Project
+public/*
+dist/*
+source/assets/js/vendor/*
+source/assets/js/helpers/*
+source/assets/scss/vendor/*
+
+# Do not ignore .gitkeep in ignored directories
+!.gitkeep

@@ -1,0 +1,61 @@
+#!/bin/sh
+
+echo "\nGet dependencies"
+echo "================\n"
+
+npm install
+bower install
+
+echo "\n\nInitializing project"
+echo "====================\n"
+
+# Clone Pattern Lab repository
+git clone https://github.com/pattern-lab/patternlab-php.git && \
+
+# Move Pattern Lab directories
+mv patternlab-php/config/ .                                 && \
+mv patternlab-php/core/ .                                   && \
+mv patternlab-php/extras/ .                                 && \
+mv patternlab-php/public/ .                                 && \
+
+# Delete remaining Pattern Lab directory
+rm -rf patternlab-php                                       && \
+
+# Generate Pattern Lab for the first time
+rm -rf source/assets                                        && \
+php core/builder.php -g                                     && \
+
+# Get Git submodule(s)
+git submodule init                                          && \
+git submodule update                                        && \
+cd source/assets/scss/                                      && \
+git pull origin master                                      && \
+# rm -rf .git                                                && \
+cd ../../../                                                && \
+
+# Remove no longer needed project Git repository
+# rm -rf .git/                                                && \
+# rm -rf .gitmodules                                          && \
+
+# Delete Pattern Lab source files
+rm source/favicon.ico                                       && \
+rm -rf source/css/                                          && \
+rm -rf source/js/                                           && \
+rm -rf source/fonts/                                        && \
+# rm -rf source/image/                                        && \
+
+# Create assets directories
+mkdir source/assets/fonts/                                  && \
+> source/assets/fonts/.gitkeep                              && \
+mkdir source/assets/images/                                 && \
+> source/assets/images/.gitkeep                             && \
+mkdir source/assets/js/                                     && \
+> source/assets/js/script.js
+
+echo ""
+echo "================================================"
+echo "=  Pattern Lab is now beautifully scaffolded!  ="
+echo "================================================"
+
+# Delete this file
+# rm init

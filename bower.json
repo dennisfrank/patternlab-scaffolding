@@ -71,5 +71,8 @@
   },
   "dependencies": {
     "jquery": "~2.1.4"
+  },
+  "resolutions": {
+    "inuit-spacing": "~0.7.0"
   }
 }

@@ -4,7 +4,6 @@ module.exports = {
     },
     jsScripts: {
         src: [
-            '<%= globalConfig.source.js %>/scripts/js.js',
             '<%= globalConfig.source.js %>/scripts/**/*.js',
             '<%= globalConfig.source.js %>/*.js'
         ],

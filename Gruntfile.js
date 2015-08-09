@@ -9,28 +9,31 @@ module.exports = function(grunt) {
             source: 'source',
             assets: '<%= globalConfig.source.source %>/assets',
             css: '<%= globalConfig.source.assets %>/scss',
-            stylesheet: '<%= globalConfig.source.css %>/style.scss',
+            stylesheet: '<%= globalConfig.source.css %>/app.scss',
             js: '<%= globalConfig.source.assets %>/js',
             fonts: '<%= globalConfig.source.assets %>/fonts',
-            img: '<%= globalConfig.source.assets %>/images'
+            img: '<%= globalConfig.source.assets %>/images',
+            contentimg: '<%= globalConfig.source.source %>/images',
+            patterns: '<%= globalConfig.source.source %>/_patterns'
         },
         // The Pattern Lab destination directory.
         public: {
             public: 'public',
             assets: '<%= globalConfig.public.public %>/assets',
             css: '<%= globalConfig.public.assets %>/css',
-            stylesheet: '<%= globalConfig.public.css %>/style.css',
+            stylesheet: '<%= globalConfig.public.css %>/app.css',
             js: '<%= globalConfig.public.assets %>/js',
             fonts: '<%= globalConfig.public.assets %>/fonts',
-            img: '<%= globalConfig.public.assets %>/images'
+            img: '<%= globalConfig.public.assets %>/images',
+            contentimg: '<%= globalConfig.public.public %>/images'
         },
 
         // Adjust these values to the assets destination paths of your cms
         cms: {
-            cms: 'cms',
+            cms: 'dist',
             assets: '<%= globalConfig.cms.cms %>/assets',
             css: '<%= globalConfig.cms.assets %>/css',
-            stylesheet: '<%= globalConfig.cms.css %>/style.css',
+            stylesheet: '<%= globalConfig.cms.css %>/app.min.css',
             js: '<%= globalConfig.cms.assets %>/js',
             fonts: '<%= globalConfig.cms.assets %>/fonts',
             img: '<%= globalConfig.cms.assets %>/images'

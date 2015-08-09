@@ -28,6 +28,7 @@ For a thorough documentation, have a look at the [Wiki](https://github.com/csshu
 - [Grunt](http://gruntjs.com/).
 - [Bower](http://bower.io/).
 - [Git](http://git-scm.com/).
+- [rsync](https://rsync.samba.org/) (for deployment).
 
 
 

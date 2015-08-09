@@ -1,9 +1,14 @@
 {
   "name": "patternlab-scaffolding",
-  "version": "0.7.1",
-  "homepage": "https://github.com/csshugs/patternlab-scaffolding",
+  "version": "0.7.1+0.1.0",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "authors": [
-    "Dennis Heibült <dennis@csshugs.com>"
+    "Dennis Heibült <dennis@csshugs.com>",
+    "Dennis Frank <mail@dennisfrank.info>"
   ],
   "description": "Combining Pattern Lab with Grunt and inuitcss",
   "main": "Gruntfile.js",

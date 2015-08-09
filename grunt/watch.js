@@ -11,6 +11,10 @@ module.exports = {
         files: ['<%= globalConfig.source.img %>/**/{.*,*,*/*}'],
         tasks: ['copy:imgPublic', 'copy:imgCms']
     },
+    contentimg: {
+        files: ['<%= globalConfig.source.contentimg %>/**/{.*,*,*/*}'],
+        tasks: ['sync:contentimgPublic']
+    },
     fonts: {
         files: ['<%= globalConfig.source.fonts %>/**/{.*,*,*/*}'],
         tasks: ['copy:fontsPublic', 'copy:fontsCms']

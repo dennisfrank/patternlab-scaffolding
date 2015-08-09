@@ -18,14 +18,5 @@ module.exports = {
     fonts: {
         files: ['<%= globalConfig.source.fonts %>/**/{.*,*,*/*}'],
         tasks: ['copy:fontsPublic', 'copy:fontsCms']
-    },
-    livereload: {
-        options: {
-            livereload: 35729
-        },
-        files: [
-            '<%= globalConfig.public.public %>/**/*',
-            '!<%= globalConfig.public.public %>/patterns/**/*'
-        ]
     }
 };

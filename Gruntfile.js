@@ -64,6 +64,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'clean:public',
         'clean:cms',
+        'clean:jsVendor',
         'copy:patternlab',
         'shell:patternlab-generate',
         'bowerInject',

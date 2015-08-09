@@ -2,7 +2,9 @@ module.exports = {
     bsFiles: {
         src: [
             '<%= globalConfig.public.public %>/**/*',
-            '!<%= globalConfig.public.public %>/patterns/**/*'
+            '!<%= globalConfig.public.public %>/*',
+            '!<%= globalConfig.public.public %>/patterns/**/*',
+            '!<%= globalConfig.public.public %>/styleguide/**/*'
         ]
     },
     options: {
@@ -15,6 +17,7 @@ module.exports = {
             baseDir: './<%= globalConfig.public.public %>/'
         },
         ghostMode: false,
-        notify: false
+        notify: false,
+        open: false
     }
 };

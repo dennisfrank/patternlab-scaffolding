@@ -1,5 +1,5 @@
 module.exports = {
-    contentimgPublic: {
+    contentImgPublic: {
         files: [
             {
                 expand: true,

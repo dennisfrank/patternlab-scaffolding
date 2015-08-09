@@ -13,7 +13,7 @@ module.exports = {
     },
     contentimg: {
         files: ['<%= globalConfig.source.contentimg %>/**/{.*,*,*/*}'],
-        tasks: ['sync:contentimgPublic']
+        tasks: ['sync:contentImgPublic']
     },
     fonts: {
         files: ['<%= globalConfig.source.fonts %>/**/{.*,*,*/*}'],

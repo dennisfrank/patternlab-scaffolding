@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         'shell:patternlab-generate',
         'bowerInject',
         'scripts',
-        'sync:contentimgPublic',
+        'sync:contentImgPublic',
         'copy:imgCms',
         'copy:fontsPublic',
         'copy:fontsCms',

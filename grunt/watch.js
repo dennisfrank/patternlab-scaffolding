@@ -22,5 +22,9 @@ module.exports = {
     patterns: {
         files: ['<%= globalConfig.source.patterns %>/**/{.*,*,*/*}'],
         tasks: ['todo:hideOutput']
+    },
+    docs: {
+        files: ['<%= globalConfig.docs.docs %>/**/{.*,*,*/*}'],
+        tasks: ['todo:hideOutput']
     }
 };

@@ -39,6 +39,11 @@ module.exports = function(grunt) {
             img: '<%= globalConfig.cms.assets %>/images'
         },
 
+        // Documentation
+        docs: {
+            docs: 'docs'
+        },
+
         // Staging server
         stage: {
             host: '', // user@example.com

@@ -53,6 +53,12 @@ mkdir source/assets/images/                                 && \
 mkdir source/assets/js/                                     && \
 > source/assets/js/script.js
 
+
+echo "\n\nGenerate Pattern Lab initially"
+echo "==============================\n"
+
+php core/builder.php -g
+
 echo ""
 echo "================================================"
 echo "=  Pattern Lab is now beautifully scaffolded!  ="

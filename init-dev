@@ -58,5 +58,5 @@ echo "================================================"
 echo "=  Pattern Lab is now beautifully scaffolded!  ="
 echo "================================================"
 
-# Delete this file
+# Delete init files
 # rm init

@@ -63,6 +63,12 @@ echo ""
 echo "================================================"
 echo "=  Pattern Lab is now beautifully scaffolded!  ="
 echo "================================================"
+echo "\n"
+echo "1. Start Grunt Watcher with\n"
+echo "grunt serve"
+echo "\n"
+echo "2. Start Pattern Lab watcher with\n"
+echo "php core/builder.php -wrp"
 
 # Delete init files
 rm init-dev

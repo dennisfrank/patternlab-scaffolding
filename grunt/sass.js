@@ -35,6 +35,7 @@ module.exports = {
             extDot: 'last',
             cwd: '<%= globalConfig.source.css %>/',
             src: [
+                '**/app.scss',
                 '**/*.app.scss'
             ],
             dest: '<%= globalConfig.cms.css %>/',

@@ -19,13 +19,13 @@ module.exports = {
             }
         ]
     },
-    imgCms: {
+    imgDist: {
         files: [
             {
                 expand: true,
                 cwd: '<%= globalConfig.source.img %>/',
                 src: ['./**/*.*'],
-                dest: '<%= globalConfig.cms.img %>/'
+                dest: '<%= globalConfig.dist.img %>/'
             }
         ]
     },
@@ -39,13 +39,13 @@ module.exports = {
             }
         ]
     },
-    fontsCms: {
+    fontsDist: {
         files: [
             {
                 expand: true,
                 cwd: '<%= globalConfig.source.fonts %>/',
                 src: ['./**/*.*'],
-                dest: '<%= globalConfig.cms.fonts %>/'
+                dest: '<%= globalConfig.dist.fonts %>/'
             }
         ]
     },
@@ -59,13 +59,13 @@ module.exports = {
             }
         ]
     },
-    jsCms: {
+    jsDist: {
         files: [
             {
                 expand: true,
                 cwd: '<%= globalConfig.source.js %>/',
                 src: ['*.js'],
-                dest: '<%= globalConfig.cms.js %>/'
+                dest: '<%= globalConfig.dist.js %>/'
             }
         ]
     }

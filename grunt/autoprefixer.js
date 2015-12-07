@@ -14,11 +14,11 @@ module.exports = {
         src: '**/*.css',
         dest: '<%= globalConfig.public.css %>/'
     },
-    cms: {
+    dist: {
         expand: true,
         flatten: true,
-        cwd: '<%= globalConfig.cms.css %>/',
+        cwd: '<%= globalConfig.dist.css %>/',
         src: '**/*.css',
-        dest: '<%= globalConfig.cms.css %>/'
+        dest: '<%= globalConfig.dist.css %>/'
     }
 };

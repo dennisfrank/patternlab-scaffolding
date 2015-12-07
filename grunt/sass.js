@@ -25,7 +25,7 @@ module.exports = {
             ext: '.css'
         }]
     },
-    cms: {
+    dist: {
         options: {
             outputStyle: 'compressed'
         },
@@ -38,7 +38,7 @@ module.exports = {
                 '**/app.scss',
                 '**/*.app.scss'
             ],
-            dest: '<%= globalConfig.cms.css %>/',
+            dest: '<%= globalConfig.dist.css %>/',
             ext: '.css'
         }]
     }

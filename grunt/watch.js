@@ -5,11 +5,11 @@ module.exports = {
     },
     js: {
         files: ['<%= globalConfig.source.js %>/**/{.*,*,*/*}'],
-        tasks: ['copy:jsPublic', 'copy:jsCms', 'todo:hideOutput']
+        tasks: ['copy:jsPublic', 'copy:jsDist', 'todo:hideOutput']
     },
     img: {
         files: ['<%= globalConfig.source.img %>/**/{.*,*,*/*}'],
-        tasks: ['copy:imgPublic', 'copy:imgCms']
+        tasks: ['copy:imgPublic', 'copy:imgDist']
     },
     contentimg: {
         files: ['<%= globalConfig.source.contentimg %>/**/{.*,*,*/*}'],
@@ -17,7 +17,7 @@ module.exports = {
     },
     fonts: {
         files: ['<%= globalConfig.source.fonts %>/**/{.*,*,*/*}'],
-        tasks: ['copy:fontsPublic', 'copy:fontsCms']
+        tasks: ['copy:fontsPublic', 'copy:fontsDist']
     },
     patterns: {
         files: ['<%= globalConfig.source.patterns %>/**/{.*,*,*/*}'],

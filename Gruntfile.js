@@ -28,15 +28,15 @@ module.exports = function(grunt) {
             contentimg: '<%= globalConfig.public.public %>/images'
         },
 
-        // Adjust these values to the assets destination paths of your cms
-        cms: {
-            cms: 'dist',
-            assets: '<%= globalConfig.cms.cms %>/assets',
-            css: '<%= globalConfig.cms.assets %>/css',
-            stylesheet: '<%= globalConfig.cms.css %>/app.min.css',
-            js: '<%= globalConfig.cms.assets %>/js',
-            fonts: '<%= globalConfig.cms.assets %>/fonts',
-            img: '<%= globalConfig.cms.assets %>/images'
+        // Adjust these values to the assets destination paths of your dist folder or CMS
+        dist: {
+            dist: 'dist',
+            assets: '<%= globalConfig.dist.dist %>/assets',
+            css: '<%= globalConfig.dist.assets %>/css',
+            stylesheet: '<%= globalConfig.dist.css %>/app.min.css',
+            js: '<%= globalConfig.dist.assets %>/js',
+            fonts: '<%= globalConfig.dist.assets %>/fonts',
+            img: '<%= globalConfig.dist.assets %>/images'
         },
 
         // Documentation
@@ -74,16 +74,16 @@ module.exports = function(grunt) {
     // Default task.
     grunt.registerTask('default', [
         'clean:public',
-        'clean:cms',
+        'clean:dist',
         'clean:jsVendor',
         'copy:patternlab',
         'shell:patternlab-generate',
         'bowerInject',
         'scripts',
         'sync:contentImgPublic',
-        'copy:imgCms',
+        'copy:imgDist',
         'copy:fontsPublic',
-        'copy:fontsCms',
+        'copy:fontsDist',
         'copy:jsPublic',
         'shell:patternlab-patterns',
         'sass_globbing',

@@ -7,14 +7,14 @@ module.exports = {
             '<%= globalConfig.source.js %>/scripts/**/*.js',
             '<%= globalConfig.source.js %>/*.js'
         ],
-        dest: '<%= globalConfig.cms.js %>/scripts.js'
+        dest: '<%= globalConfig.dist.js %>/scripts.js'
     },
     jsVendor: {
         src: [
             '<%= globalConfig.source.js %>/vendor/libs/**/*.js',
             '<%= globalConfig.source.js %>/vendor/plugins/**/*.js'
         ],
-        dest: '<%= globalConfig.cms.js %>/vendor.js'
+        dest: '<%= globalConfig.dist.js %>/vendor.js'
     },
     jsAll: {
         src: [
@@ -23,6 +23,6 @@ module.exports = {
             '<%= globalConfig.source.js %>/scripts/**/*.js',
             '<%= globalConfig.source.js %>/*.js'
         ],
-        dest: '<%= globalConfig.cms.js %>/app.js'
+        dest: '<%= globalConfig.dist.js %>/app.js'
     }
 };

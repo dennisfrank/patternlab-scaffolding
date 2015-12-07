@@ -4,9 +4,9 @@ module.exports = {
             '<%= globalConfig.public.public %>/'
         ]
     },
-    cms: {
+    dist: {
         src: [
-            '<%= globalConfig.cms.cms %>/'
+            '<%= globalConfig.dist.dist %>/'
         ]
     },
     jsVendor: {

@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             fonts: '<%= globalConfig.source.assets %>/fonts',
             img: '<%= globalConfig.source.assets %>/images',
             contentimg: '<%= globalConfig.source.source %>/images',
-            patterns: '<%= globalConfig.source.source %>/_patterns'
+            patterns: '<%= globalConfig.source.source %>/_patterns',
         },
         // The Pattern Lab destination directory.
         public: {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             js: '<%= globalConfig.public.assets %>/js',
             fonts: '<%= globalConfig.public.assets %>/fonts',
             img: '<%= globalConfig.public.assets %>/images',
-            contentimg: '<%= globalConfig.public.public %>/images'
+            contentimg: '<%= globalConfig.public.public %>/images',
         },
 
         // Adjust these values to the assets destination paths of your dist folder or CMS
@@ -36,18 +36,18 @@ module.exports = function(grunt) {
             stylesheet: '<%= globalConfig.dist.css %>/app.min.css',
             js: '<%= globalConfig.dist.assets %>/js',
             fonts: '<%= globalConfig.dist.assets %>/fonts',
-            img: '<%= globalConfig.dist.assets %>/images'
+            img: '<%= globalConfig.dist.assets %>/images',
         },
 
         // Documentation
         docs: {
-            docs: 'docs'
+            docs: 'docs',
         },
 
         // Staging server
         stage: {
             host: '', // user@example.com
-            dest: ''  // server path
+            dest: '',  // server path
         }
 
     };
@@ -61,11 +61,11 @@ module.exports = function(grunt) {
     require('load-grunt-config')(grunt, {
         jitGrunt: {
             staticMappings: {
-                scsslint: 'grunt-scss-lint'
+                scsslint: 'grunt-scss-lint',
             }
         },
         config: {
-            globalConfig: globalConfig
+            globalConfig: globalConfig,
         }
     });
 
@@ -98,24 +98,21 @@ module.exports = function(grunt) {
 
     // Linting task.
     grunt.registerTask('lint', [
-        'scsslint'
+        'scsslint',
     ]);
-
-
 
     // Bower components injection.
     grunt.registerTask('bowerInject', [
         'clean:jsVendor',
         'bowercopy',
-        'injector'
+        'injector',
     ]);
 
     // Uglify and concat js files.
     grunt.registerTask('scripts', [
-        //'concat:jsVendor',
-        //'concat:jsScripts',
         'concat:jsAll',
-        'uglify:js'
+        'uglify:js',
+    ]);
 
     // Generate dist files.
     grunt.registerTask('dist', [
@@ -130,9 +127,8 @@ module.exports = function(grunt) {
 
     // Deploy task.
     grunt.registerTask('deploy', [
-        'rsync:stage'
+        'default',
+        'rsync:stage',
     ]);
-
-
 
 };

@@ -6,7 +6,7 @@ module.exports = {
     },
     stage: {
         options: {
-            args: ['--verbose'],
+            args: ['--verbose --perms --compress'],
             src: '<%= globalConfig.public.public %>/',
             host: '<%= globalConfig.stage.host %>',
             dest: '<%= globalConfig.stage.dest %>',

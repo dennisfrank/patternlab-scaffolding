@@ -1,5 +1,5 @@
 module.exports = {
     dev: [
-        'sass'
+        'sass:dev'
     ]
 };

@@ -1,15 +1,15 @@
 module.exports = {
     scss: {
         files: ['<%= globalConfig.source.css %>/**/{.*,*,*/*}'],
-        tasks: ['sass_globbing', 'sass', 'autoprefixer', 'todo:hideOutput']
+        tasks: ['sass_globbing', 'sass', 'autoprefixer:dev', 'todo:hideOutput']
     },
     js: {
         files: ['<%= globalConfig.source.js %>/**/{.*,*,*/*}'],
-        tasks: ['copy:jsPublic', 'copy:jsDist', 'todo:hideOutput']
+        tasks: ['copy:jsPublic', 'todo:hideOutput']
     },
     img: {
         files: ['<%= globalConfig.source.img %>/**/{.*,*,*/*}'],
-        tasks: ['sync:imgPublic','sync:imgDist']
+        tasks: ['sync:imgPublic']
     },
     contentimg: {
         files: ['<%= globalConfig.source.contentimg %>/**/{.*,*,*/*}'],
@@ -17,7 +17,7 @@ module.exports = {
     },
     fonts: {
         files: ['<%= globalConfig.source.fonts %>/**/{.*,*,*/*}'],
-        tasks: ['copy:fontsPublic', 'copy:fontsDist']
+        tasks: ['copy:fontsPublic']
     },
     patterns: {
         files: ['<%= globalConfig.source.patterns %>/**/{.*,*,*/*}'],

@@ -74,21 +74,18 @@ module.exports = function(grunt) {
     // Default task.
     grunt.registerTask('default', [
         'clean:public',
-        'clean:dist',
         'clean:jsVendor',
         'copy:patternlab',
         'shell:patternlab-generate',
         'bowerInject',
-        'scripts',
         'sync:contentImgPublic',
-        'sync:imgDist',
+        'sync:imgPublic',
         'copy:fontsPublic',
-        'copy:fontsDist',
         'copy:jsPublic',
         'shell:patternlab-patterns',
         'sass_globbing',
-        'concurrent',
-        'autoprefixer',
+        'concurrent:dev',
+        'autoprefixer:dev',
         'todo:showOutput',
     ]);
 
@@ -119,6 +116,16 @@ module.exports = function(grunt) {
         //'concat:jsScripts',
         'concat:jsAll',
         'uglify:js'
+
+    // Generate dist files.
+    grunt.registerTask('dist', [
+        'clean:dist',
+        'default',
+        'scripts',
+        'sync:imgDist',
+        'copy:fontsDist',
+        'sass:dist',
+        'autoprefixer:dist',
     ]);
 
     // Deploy task.

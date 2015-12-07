@@ -9,26 +9,6 @@ module.exports = {
             }
         ]
     },
-    imgPublic: {
-        files: [
-            {
-                expand: true,
-                cwd: '<%= globalConfig.source.img %>/',
-                src: ['./**/*.*'],
-                dest: '<%= globalConfig.public.img %>/'
-            }
-        ]
-    },
-    imgDist: {
-        files: [
-            {
-                expand: true,
-                cwd: '<%= globalConfig.source.img %>/',
-                src: ['./**/*.*'],
-                dest: '<%= globalConfig.dist.img %>/'
-            }
-        ]
-    },
     fontsPublic: {
         files: [
             {

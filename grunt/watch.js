@@ -9,7 +9,7 @@ module.exports = {
     },
     img: {
         files: ['<%= globalConfig.source.img %>/**/{.*,*,*/*}'],
-        tasks: ['copy:imgPublic', 'copy:imgDist']
+        tasks: ['sync:imgPublic','sync:imgDist']
     },
     contentimg: {
         files: ['<%= globalConfig.source.contentimg %>/**/{.*,*,*/*}'],

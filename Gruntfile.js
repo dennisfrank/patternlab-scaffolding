@@ -81,7 +81,7 @@ module.exports = function(grunt) {
         'bowerInject',
         'scripts',
         'sync:contentImgPublic',
-        'copy:imgDist',
+        'sync:imgDist',
         'copy:fontsPublic',
         'copy:fontsDist',
         'copy:jsPublic',

@@ -13,6 +13,7 @@ module.exports = function(grunt) {
             js: '<%= globalConfig.source.assets %>/js',
             fonts: '<%= globalConfig.source.assets %>/fonts',
             img: '<%= globalConfig.source.assets %>/images',
+            icons: '<%= globalConfig.source.assets %>/icons',
             contentimg: '<%= globalConfig.source.source %>/images',
             patterns: '<%= globalConfig.source.source %>/_patterns',
         },
@@ -25,6 +26,7 @@ module.exports = function(grunt) {
             js: '<%= globalConfig.public.assets %>/js',
             fonts: '<%= globalConfig.public.assets %>/fonts',
             img: '<%= globalConfig.public.assets %>/images',
+            icons: '<%= globalConfig.public.assets %>/icons',
             contentimg: '<%= globalConfig.public.public %>/images',
         },
 
@@ -37,6 +39,7 @@ module.exports = function(grunt) {
             js: '<%= globalConfig.dist.assets %>/js',
             fonts: '<%= globalConfig.dist.assets %>/fonts',
             img: '<%= globalConfig.dist.assets %>/images',
+            icons: '<%= globalConfig.dist.assets %>/icons',
         },
 
         // Documentation
@@ -80,6 +83,7 @@ module.exports = function(grunt) {
         'bowerInject',
         'sync:contentImgPublic',
         'sync:imgPublic',
+        'sync:iconsPublic',
         'copy:fontsPublic',
         'copy:jsPublic',
         'shell:patternlab-patterns',
@@ -120,6 +124,7 @@ module.exports = function(grunt) {
         'default',
         'scripts',
         'sync:imgDist',
+        'sync:iconsDist',
         'copy:fontsDist',
         'postcss:dist',
     ]);

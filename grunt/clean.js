@@ -12,7 +12,8 @@ module.exports = {
             '<%= globalConfig.dist.css %>',
             '<%= globalConfig.dist.js %>',
             '<%= globalConfig.dist.fonts %>',
-            '<%= globalConfig.dist.img %>'
+            '<%= globalConfig.dist.img %>',
+            '<%= globalConfig.dist.icons %>',
         ]
     },
     jsVendor: {

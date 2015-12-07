@@ -19,6 +19,10 @@ module.exports = {
         files: ['<%= globalConfig.source.fonts %>/**/{.*,*,*/*}'],
         tasks: ['copy:fontsPublic']
     },
+    icons: {
+        files: ['<%= globalConfig.source.icons %>/**/{.*,*,*/*}'],
+        tasks: ['sync:iconsPublic']
+    },
     patterns: {
         files: ['<%= globalConfig.source.patterns %>/**/{.*,*,*/*}'],
         tasks: ['todo:hideOutput']

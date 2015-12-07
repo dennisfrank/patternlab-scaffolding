@@ -31,5 +31,27 @@ module.exports = {
             }
         ],
         updateAndDelete: true
+    },
+    iconsPublic: {
+        files: [
+            {
+                expand: true,
+                cwd: '<%= globalConfig.source.icons %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.public.icons %>/'
+            }
+        ],
+        updateAndDelete: true
+    },
+    iconsDist: {
+        files: [
+            {
+                expand: true,
+                cwd: '<%= globalConfig.source.icons %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.dist.icons %>/'
+            }
+        ],
+        updateAndDelete: true
     }
 };

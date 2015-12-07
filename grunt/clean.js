@@ -5,8 +5,14 @@ module.exports = {
         ]
     },
     dist: {
+        options: {
+          force: true
+        },
         src: [
-            '<%= globalConfig.dist.dist %>/'
+            '<%= globalConfig.dist.css %>',
+            '<%= globalConfig.dist.js %>',
+            '<%= globalConfig.dist.fonts %>',
+            '<%= globalConfig.dist.img %>'
         ]
     },
     jsVendor: {

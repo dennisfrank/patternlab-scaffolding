@@ -85,7 +85,7 @@ module.exports = function(grunt) {
         'shell:patternlab-patterns',
         'sass_globbing',
         'concurrent:dev',
-        'autoprefixer:dev',
+        'postcss:dev',
         'todo:showOutput',
     ]);
 
@@ -121,8 +121,7 @@ module.exports = function(grunt) {
         'scripts',
         'sync:imgDist',
         'copy:fontsDist',
-        'sass:dist',
-        'autoprefixer:dist',
+        'postcss:dist',
     ]);
 
     // Deploy task.

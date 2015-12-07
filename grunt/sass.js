@@ -9,7 +9,7 @@ module.exports = {
         options: {
             outputStyle: 'nested',
             sourceComments: true,
-            sourceMap: true
+            sourceMapEmbed: 'embed'
         },
         files: [{
             expand: true,
@@ -25,21 +25,4 @@ module.exports = {
             ext: '.css'
         }]
     },
-    dist: {
-        options: {
-            outputStyle: 'compressed'
-        },
-        files: [{
-            expand: true,
-            flatten: true,
-            extDot: 'last',
-            cwd: '<%= globalConfig.source.css %>/',
-            src: [
-                '**/app.scss',
-                '**/*.app.scss'
-            ],
-            dest: '<%= globalConfig.dist.css %>/',
-            ext: '.css'
-        }]
-    }
 };

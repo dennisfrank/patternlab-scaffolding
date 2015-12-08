@@ -50,6 +50,8 @@ mkdir source/assets/fonts/                                  && \
 > source/assets/fonts/.gitkeep                              && \
 mkdir source/assets/images/                                 && \
 > source/assets/images/.gitkeep                             && \
+mkdir source/assets/icons/                                  && \
+> source/assets/icons/.gitkeep                              && \
 mkdir source/assets/js/                                     && \
 > source/assets/js/script.js
 

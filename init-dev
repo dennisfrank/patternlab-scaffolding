@@ -53,10 +53,19 @@ mkdir source/assets/images/                                 && \
 mkdir source/assets/js/                                     && \
 > source/assets/js/script.js
 
+# Finalize
+# rm README.md                                                && \
+# mv README.final.md README.md                                && \
+
+
 echo ""
 echo "================================================"
 echo "=  Pattern Lab is now beautifully scaffolded!  ="
 echo "================================================"
 
-# Delete init files
+# Finalize and delete not longer needed files
+# rm README.md                                                && \
+# mv README.final.md README.md                                && \
+# mv LICENSE                                                  && \
+# rm init-dev                                                 && \
 # rm init

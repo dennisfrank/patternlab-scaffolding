@@ -72,6 +72,9 @@ echo "\n"
 echo "3. Start Pattern Lab watcher with\n"
 echo "php core/builder.php -wrp"
 
-# Delete init files
-rm init-dev
+# Finalize and delete not longer needed files
+rm README.md                                                && \
+mv README.final.md README.md                                && \
+mv LICENSE                                                  && \
+rm init-dev                                                 && \
 rm init

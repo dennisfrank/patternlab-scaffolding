@@ -53,5 +53,18 @@ module.exports = {
             }
         ],
         updateAndDelete: true
+    },
+    cmsAssets: {
+        files: [
+            {
+                expand: true,
+                cwd: '<%= globalConfig.dist.assets %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.cms.assets %>/',
+                ignoreInDest: ['./avatars/**/*.*']
+            }
+        ],
+        updateAndDelete: true,
+        verbose: true
     }
 };

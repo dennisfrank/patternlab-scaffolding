@@ -4,6 +4,7 @@ module.exports = {
             require('autoprefixer')({
                 browsers: [
                     'last 3 version',
+                    'ie 8',
                     'ie 9',
                     'ie 10',
                     'ie 11'

@@ -43,7 +43,7 @@ module.exports = {
         files: [
             {
                 expand: true,
-                cwd: '<%= globalConfig.source.js %>/',
+                cwd: '<%= globalConfig.source.js %>/standalone',
                 src: ['*.js'],
                 dest: '<%= globalConfig.dist.js %>/'
             }

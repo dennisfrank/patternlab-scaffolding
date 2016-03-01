@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             contentimg: '<%= globalConfig.public.public %>/images',
         },
 
-        // Adjust these values to the assets destination paths of your dist folder or CMS
+        // Adjust these values to the assets destination paths of your dist folder
         dist: {
             dist: 'dist',
             assets: '<%= globalConfig.dist.dist %>/assets',
@@ -42,12 +42,17 @@ module.exports = function(grunt) {
             icons: '<%= globalConfig.dist.assets %>/icons',
         },
 
-        // Documentation
+        cms: {
+            cms: '', // (relative) path to CMS public web root.
+            assets: '<%= globalConfig.cms.cms %>/assets',
+        },
+
+        // Documentation.
         docs: {
             docs: 'docs',
         },
 
-        // Staging server
+        // Staging server.
         stage: {
             host: '', // user@example.com
             dest: '',  // server path
@@ -88,7 +93,7 @@ module.exports = function(grunt) {
         'copy:jsPublic',
         'shell:patternlab-patterns',
         'sass_globbing',
-        'concurrent:dev',
+        'concurrent',
         'postcss:dev',
         'todo:showOutput',
     ]);
@@ -115,7 +120,9 @@ module.exports = function(grunt) {
     // Uglify and concat js files.
     grunt.registerTask('scripts', [
         'concat:jsAll',
-        'uglify:js',
+        'copy:jsDist',
+        'uglify:jsDist',
+        'clean:jsDist'
     ]);
 
     // Generate dist files.
@@ -127,6 +134,12 @@ module.exports = function(grunt) {
         'sync:iconsDist',
         'copy:fontsDist',
         'postcss:dist',
+    ]);
+
+    // Sync dist assets to cms.
+    grunt.registerTask('cms', [
+        'dist',
+        'sync:cmsAssets',
     ]);
 
     // Deploy task.

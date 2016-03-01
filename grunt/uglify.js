@@ -1,5 +1,5 @@
 module.exports = {
-    js: {
+    jsDist: {
         files: [{
             expand: true,
             cwd: '<%= globalConfig.dist.js %>',

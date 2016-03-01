@@ -20,5 +20,11 @@ module.exports = {
         src: [
             '<%= globalConfig.source.js %>/vendor/'
         ]
+    },
+    jsDist: {
+        src: [
+            '<%= globalConfig.dist.js %>/*.js',
+            '!<%= globalConfig.dist.js %>/*.min.js',
+        ]
     }
 };

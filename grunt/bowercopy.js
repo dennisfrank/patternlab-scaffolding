@@ -6,6 +6,14 @@ module.exports = {
         dest: '<%= globalConfig.source.js %>/vendor/libs'
     },
 
+    html5shiv: {
+        src: [
+            'html5shiv/dist/html5shiv.js',
+            'html5shiv/dist/html5shiv-printshiv.js',
+        ],
+        dest: '<%= globalConfig.source.js %>/standalone'
+    },
+
     // Copy plugins
     // plugins: {
     //     src: [

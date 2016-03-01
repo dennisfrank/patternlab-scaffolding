@@ -76,7 +76,8 @@
     "modular-scale": "~2.1.1"
   },
   "dependencies": {
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "html5shiv": "~3.7.3"
   },
   "resolutions": {
     "inuit-spacing": "~0.7.0"

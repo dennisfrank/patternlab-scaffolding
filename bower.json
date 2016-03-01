@@ -1,6 +1,6 @@
 {
   "name": "patternlab-scaffolding",
-  "version": "0.7.1+0.3.0",
+  "version": "0.7.1+0.4.0",
   "homepage": "",
   "repository": {
     "type": "git",
@@ -54,8 +54,8 @@
     "inuit-reset": "~0.1.1",
     "inuit-responsive-float": "~0.2.0",
     "inuit-responsive-font-weight": "~0.2.0",
-    "inuit-responsive-pull": "~0.2.0",
-    "inuit-responsive-push": "~0.2.0",
+    "inuit-responsive-pull": "~0.3.0",
+    "inuit-responsive-push": "~0.3.0",
     "inuit-responsive-settings": "~0.1.5",
     "inuit-responsive-text-align": "~0.2.0",
     "inuit-responsive-tools": "~0.1.3",

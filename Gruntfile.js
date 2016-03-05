@@ -45,6 +45,7 @@ module.exports = function(grunt) {
         cms: {
             cms: '', // (relative) path to CMS public web root.
             assets: '<%= globalConfig.cms.cms %>/assets',
+            ignoreAssetsPaths: '', // e. g. 'avatars,panel'
         },
 
         // Documentation.

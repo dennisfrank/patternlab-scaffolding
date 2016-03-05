@@ -61,10 +61,13 @@ module.exports = {
                 cwd: '<%= globalConfig.dist.assets %>/',
                 src: ['./**/*.*'],
                 dest: '<%= globalConfig.cms.assets %>/',
-                ignoreInDest: ['./avatars/**/*.*']
             }
         ],
+        ignoreInDest: [
+          './{<%= globalConfig.cms.ignoreAssetsPaths %>}',
+          '{<%= globalConfig.cms.ignoreAssetsPaths %>}/**/*.*',
+        ],
         updateAndDelete: true,
-        verbose: true
+        compareUsing: "md5",
     }
 };

@@ -9,21 +9,11 @@ bower install
 echo "\n\nInitializing project"
 echo "====================\n"
 
-# Clone Pattern Lab repository
-git clone https://github.com/pattern-lab/patternlab-php.git && \
-
-# Move Pattern Lab directories
-mv patternlab-php/config/ .                                 && \
-mv patternlab-php/core/ .                                   && \
-mv patternlab-php/extras/ .                                 && \
-mv patternlab-php/public/ .                                 && \
-
-# Delete remaining Pattern Lab directory
-rm -rf patternlab-php                                       && \
+# Install Pattern Lab Standard Edition for Twig
+composer create-project pattern-lab/edition-twig-standard . && \
 
 # Generate Pattern Lab for the first time
-rm -rf source/assets                                        && \
-php core/builder.php -g                                     && \
+php core/console --generate                                 && \
 
 # Get Git submodule(s)
 git submodule init                                          && \
@@ -42,7 +32,6 @@ cd ../../../                                                && \
 rm source/favicon.ico                                       && \
 rm -rf source/css/                                          && \
 rm -rf source/js/                                           && \
-rm -rf source/fonts/                                        && \
 # rm -rf source/image/                                        && \
 
 # Create assets directories

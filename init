@@ -77,6 +77,6 @@ echo "php core/builder.php -wrp"
 # Finalize and delete not longer needed files
 rm README.md                                                && \
 mv README.final.md README.md                                && \
-mv LICENSE                                                  && \
+rm LICENSE                                                  && \
 rm init-dev                                                 && \
 rm init

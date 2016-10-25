@@ -9,8 +9,8 @@ bower install
 echo "\n\nInitializing project"
 echo "====================\n"
 
-# Clone Pattern Lab repository
-git clone https://github.com/pattern-lab/patternlab-php.git && \
+# Clone Pattern Lab 1 repository
+git clone --branch v1.1.0 https://github.com/pattern-lab/patternlab-php.git && \
 
 # Move Pattern Lab directories
 mv patternlab-php/config/ .                                 && \
